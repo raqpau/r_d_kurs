@@ -42,7 +42,7 @@ i wprowadź dane testowe, np.:
 ```json
 {
   "area_m2": 47,
-  "locality": "Łódź Bałuty",
+  "locality": "Warszawa Ochota",
   "rooms": 2,
   "owner_direct": true,
   "photos": 16,
