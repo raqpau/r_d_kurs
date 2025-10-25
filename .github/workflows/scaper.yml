@@ -28,4 +28,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: scraped-data
-          path: zadanie_3/results/data.csv
+          path: zadanie_3/ogloszenia_lodz.csv
