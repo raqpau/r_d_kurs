@@ -22,7 +22,7 @@ jobs:
         run: pip install -r zadanie_3/requirements.txt
 
       - name: Run scraper
-        run: python zadanie_3/scraper.py
+        run: python zadanie_3/scrape.py
 
       - name: Upload result file as artifact
         uses: actions/upload-artifact@v4
