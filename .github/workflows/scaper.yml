@@ -1,0 +1,31 @@
+name: Daily Scraper
+
+on:
+  schedule:
+    - cron: "0 6 * * *"  # codziennie o 6:00 UTC
+  workflow_dispatch:
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r zadanie_3/requirements.txt
+
+      - name: Run scraper
+        run: python zadanie_3/scraper.py
+
+      - name: Upload result file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraped-data
+          path: zadanie_3/results/data.csv
